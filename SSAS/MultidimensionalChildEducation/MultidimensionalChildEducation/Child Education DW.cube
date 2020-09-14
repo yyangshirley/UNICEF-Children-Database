@@ -1,0 +1,640 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="11511e0e-7f68-48b7-85dd-5566449047a3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Child Education DW</ID>
+  <Name>Child Education DW</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="20" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7789" scrolltop="320" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="24059" y="10971" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactEducation" left="6830" top="4993" logicalid="10" controlid="1" masterid="0" hint1="0" hint2="0" width="4039" height="5470" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000c70f00005e150000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactEducation" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimModernization" left="20" top="6020" logicalid="11" controlid="2" masterid="0" hint1="0" hint2="0" width="4410" height="2946" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003a110000820b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimModernization" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimChildLabour" left="7349" top="917" logicalid="12" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000210a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimChildLabour" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimViolence" left="7302" top="12064" logicalid="13" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2240" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000c0080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimViolence" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimCountry" left="13269" top="6373" logicalid="14" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="2240" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000c0080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCountry" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10569" top="6328" logicalid="15" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="1015" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEducation-DimCountry]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="10" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13269" y="6943" />
+              <point x="12069" y="6943" />
+              <point x="12069" y="6628" />
+              <point x="10869" y="6628" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8450" top="3011" logicalid="16" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="2282" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEducation-DimChildLabour]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8849" y="3510" />
+              <point x="8849" y="4993" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8403" top="10163" logicalid="17" controlid="8" masterid="0" hint1="0" hint2="0" width="799" height="2401" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEducation-DimViolence]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8802" y="12064" />
+              <point x="8802" y="11240" />
+              <point x="8849" y="11240" />
+              <point x="8849" y="10463" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4130" top="6878" logicalid="18" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="1015" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEducation-DimModernization]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="19" destattachpoint="20" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4430" y="7493" />
+              <point x="5630" y="7493" />
+              <point x="5630" y="7178" />
+              <point x="6830" y="7178" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-7789</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>320</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>917</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="dc902314-f4c2-40fe-afd0-b566f5529e98">
+      <ID>Country</ID>
+      <Name>Country</Name>
+      <DimensionID>Country</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="75d7e1a1-fe2c-4bbb-947d-553d6ee5fbb3">
+          <AttributeID>Country Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f803879-3455-435a-9c75-721fbe6cde6b">
+          <AttributeID>Country Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1458a58e-7163-480a-91cd-e9d7c1f5ce93">
+          <AttributeID>Region Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="162ee276-0422-4d71-9817-c133af8563e8">
+          <AttributeID>Population</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f0c2eec0-819c-4466-9507-bba030c61a75">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="b774e97a-16e0-475d-9a43-dcaa01258b08">
+      <ID>Child Labour</ID>
+      <Name>Child Labour</Name>
+      <DimensionID>Child Labour</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f03b3efa-88f7-45bd-91ce-c10195446c7c">
+          <AttributeID>Labour Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c398d8a5-2b5b-45c6-8789-459f497f3914">
+          <AttributeID>Total Rate</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da8ebb2a-8398-44f2-883c-be414cf7c0f4">
+          <AttributeID>Male</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f612f73-2da0-4a39-b4c1-86ecd3edd81b">
+          <AttributeID>Female</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d42b7c1f-9930-47ea-8e19-5ee22c131ae8">
+          <AttributeID>Country Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c4902927-4923-4635-b8cc-9c571052dd70">
+      <ID>Violence</ID>
+      <Name>Violence</Name>
+      <DimensionID>Violence</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="382ca7d3-f319-476b-bc15-6ef2b0313efd">
+          <AttributeID>Violence Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ab0042b-6080-4255-aee1-8060574b157c">
+          <AttributeID>Male Rate</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d91a7535-f144-44fa-9c75-1ca2db03bc73">
+          <AttributeID>Female Rate</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="af200af6-0e58-4edd-94b0-db2eb5bcb4f8">
+          <AttributeID>Country Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="01ea7196-f097-4e0e-bcf4-21bf99d323ea">
+      <ID>Modernization</ID>
+      <Name>Modernization</Name>
+      <DimensionID>Modernization</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="70bad96b-6c60-4f02-baf9-43ece7a4616d">
+          <AttributeID>Modernization Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="76b55d4f-905c-4ba3-823a-7a5d0f6b916e">
+          <AttributeID>Country Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fbdbe893-c5dd-4c56-9d08-0eb8304139d5">
+          <AttributeID>Urban</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1eea148-56fb-4bda-9f00-dbe4a1bf46c9">
+          <AttributeID>Rural</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ce9d3b5-5f99-463d-99a4-cc7c83d33b1e">
+          <AttributeID>Urban Population Weighted</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5de581c9-7f88-4a1d-aefd-73c9a10b14ce">
+          <AttributeID>Rural Population Weighted</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="3ed37268-2253-491d-8366-0c1de37d4de0">
+      <ID>Fact Education</ID>
+      <Name>Fact Education</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="020009fd-e79b-4ee0-b1c9-e09b6f2d8199">
+          <ID>Urban Num</ID>
+          <Name>Urban Num</Name>
+          <Source dwd:design-time-name="37c20575-ff3c-4f2c-af64-8527ebe730dc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f7a9ddfd-c216-49de-9a52-f5570d7255af">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>UrbanNum</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8b846909-3aeb-4b7c-a547-a7acbc7ebb1f">
+          <ID>Rural Num</ID>
+          <Name>Rural Num</Name>
+          <Source dwd:design-time-name="7d55689b-8951-4dc3-a7c7-54a4df4c5641">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="043a98a6-423c-4543-86bd-bd08bec77290">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>RuralNum</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9973564a-3cd3-4d70-997f-5d8aa1fa9b72">
+          <ID>Total Violence Num</ID>
+          <Name>Total Violence Num</Name>
+          <Source dwd:design-time-name="ef003f40-b281-4427-b3eb-7003f2763e22">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7b1ba086-0523-4698-9ecc-404a3bff7d2e">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>TotalViolenceNum</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d960ecff-bf84-4834-9cc6-6cc2b7c59e4e">
+          <ID>Total Labour Num</ID>
+          <Name>Total Labour Num</Name>
+          <Source dwd:design-time-name="bab43677-5282-4603-8873-556dbb9a206a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="063c348d-e887-485b-a247-4295c020f8c3">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>TotalLabourNum</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3809503a-be59-4bf3-aaf1-ca2cb107b02d">
+          <ID>School Completion Rate</ID>
+          <Name>School Completion Rate</Name>
+          <Source dwd:design-time-name="29685e93-6384-4e46-9f28-014c4776113f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="949038bc-e44e-484b-bf3d-299c130f9d28">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>SchoolCompletionRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ab420de8-a491-4a6d-bf91-15f01e63963d">
+          <ID>Total School Completion</ID>
+          <Name>Total School Completion</Name>
+          <Source dwd:design-time-name="b00773c0-06e6-4474-8567-ec8c4749fdbb">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3e76d9da-8b13-4e20-9105-8f28d917d16f">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>TotalSchoolCompletion</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0e4944dc-a6aa-42b4-99b2-4c102453cb0f">
+          <ID>Outof School Rate</ID>
+          <Name>Outof School Rate</Name>
+          <Source dwd:design-time-name="3319758a-b04c-4f1b-b58c-0392a9d930dc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a6560533-b7b1-4c13-a570-36402669fdaf">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>OutofSchoolRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cbbf6ff2-f3c6-45ac-be4c-3b5d94fcc2bb">
+          <ID>Total Outof School</ID>
+          <Name>Total Outof School</Name>
+          <Source dwd:design-time-name="14978511-7cec-4f96-b2a3-66688a6eca97">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1300e33d-189d-401b-add7-ad7fd0a52be3">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>TotalOutofSchool</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="113c32a6-041a-4cef-aa41-bcdf421c19fe">
+          <ID>Net Attendance Rate</ID>
+          <Name>Net Attendance Rate</Name>
+          <Source dwd:design-time-name="b719aaab-615f-4864-96e2-1c4c2af68574">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ff79cd9b-4eff-4338-bce1-f20f43c56951">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>NetAttendanceRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bc56e8ce-3a69-4a8c-b1b1-ea2c01cf41a3">
+          <ID>Total Net Attendance</ID>
+          <Name>Total Net Attendance</Name>
+          <Source dwd:design-time-name="2ef17288-8cd8-4c9f-ad47-e0761ec78316">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0e30571c-5f75-4d70-bc04-316cc96a06b5">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>TotalNetAttendance</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9ca43b93-6e51-4cab-8ebc-b837babd9f72">
+          <ID>Fact Education Count</ID>
+          <Name>Fact Education Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="b0072369-3059-4b83-b857-109ad029d744">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2385961a-9f6c-499c-ae7b-b27a1a12f3df">
+              <TableID>dbo_FactEducation</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="133a7602-7370-4fa6-a798-8b5a2678abcf">
+          <ID>Maximum School Completion Rate</ID>
+          <Name>Maximum School Completion Rate</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="aa1b18f8-86aa-467d-a697-0a85d5307b64">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6c3f20eb-cb7e-467e-b1e6-2beabb859dfa">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>SchoolCompletionRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="530ba487-18c2-47a5-9f8d-60672f46d5c5">
+          <ID>Minimum School Completion Rate</ID>
+          <Name>Minimum School Completion Rate</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <Source dwd:design-time-name="437b63a8-b2a6-4975-a215-72a0d15c3687">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="85a479e6-d1f6-4beb-a8f6-b5afcc95861d">
+              <TableID>dbo_FactEducation</TableID>
+              <ColumnID>SchoolCompletionRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3670dccc-6707-456f-8e51-4be18ba8dbb6">
+          <CubeDimensionID>Country</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e372a590-f0b4-45c6-8deb-a61ee0036e1e">
+              <AttributeID>Country Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="21a9d1a7-b76a-46a0-bc0c-be92e73fb261">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a85ecac0-4dc6-47fc-af05-5a6547cffc99">
+                    <TableID>dbo_FactEducation</TableID>
+                    <ColumnID>CountryKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3d2090e7-081b-4965-918d-692962907cc1">
+          <CubeDimensionID>Child Labour</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c45c8b86-db6a-4bc7-b23f-3c4521c14f40">
+              <AttributeID>Labour Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9ff7bd55-16a7-4259-86ee-b4305ebe6849">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="26d02fe1-0fd1-4a6d-8eb0-9f99165ef9ea">
+                    <TableID>dbo_FactEducation</TableID>
+                    <ColumnID>LabourKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="80b05642-24bd-4bc9-899a-cdd703f60d18">
+          <CubeDimensionID>Violence</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="24d7b57f-ef2b-4a37-b249-1442b7c2b9d1">
+              <AttributeID>Violence Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1d812bd2-936b-4926-8e74-66f799afff61">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="16bd6284-2b3d-4778-8fa2-934df0c0b8ed">
+                    <TableID>dbo_FactEducation</TableID>
+                    <ColumnID>ViolenceKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0a5dd630-f7e5-45fb-8cab-a185b5213dce">
+          <CubeDimensionID>Modernization</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="78f85de4-1f2c-4b35-b3bb-b4d82436edfa">
+              <AttributeID>Modernization Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6f2c8423-d2f7-435a-b778-464dfac7727a">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="23e454a3-2f70-4337-84c6-b5889c7a506b">
+                    <TableID>dbo_FactEducation</TableID>
+                    <ColumnID>ModernizationKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="81e7ecde-4f76-4a5f-b059-f450d2b70b0c">
+    <DataSourceViewID>Child Education DW</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="d2c6cc73-eccb-4718-8c2b-a66f871d7df6">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Rural Completion]
+ AS [Measures].[Rural Num]/([Measures].[Rural Num]+[Measures].[Urban Num]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Urban Completion]
+ AS [Measures].[Urban Num]/([Measures].[Urban Num]+[Measures].[Rural Num]), 
+VISIBLE = 1;   
+CREATE MEMBER CURRENTCUBE.[Measures].[CompletionRate]
+ AS [Measures].[Total School Completion]/[Measures].[Total Net Attendance], 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Fact Education'  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Kpis>
+    <Kpi dwd:design-time-name="b723f544-6ad6-404e-95fa-8002822d5104">
+      <ID>KPI</ID>
+      <Name>KPI_Completion</Name>
+      <Value>[Measures].[CompletionRate]</Value>
+      <Goal>CASE
+    WHEN [Country].[Region Name]
+        IS [Country].[Region Name].[NA]
+            THEN .95
+    WHEN [Country].[Region Name]
+        IS [Country].[Region Name].[WCA]
+            THEN .85
+ELSE .90
+END
+</Goal>
+      <Status>
+Case  
+  When KpiValue("KPI_Completion") / KpiGoal("KPI_Completion") &gt; .90  
+    Then 1  
+  When KpiValue("KPI_Completion") / KpiGoal("KPI_Completion") &lt;= .90  
+    And  
+       KpiValue("KPI_Completion") / KpiGoal("KPI_Completion") &gt; .80  
+    Then 0  
+  Else -1  
+End
+</Status>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Traffic Light</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="6c1c5bc9-2883-4b05-aba6-8a00116546c1">
+      <ID>KPI 1</ID>
+      <Name>KPI_Urban</Name>
+      <Value>[Measures].[Urban Completion]</Value>
+      <Goal>CASE
+    WHEN [Country].[Region Name]
+        IS [Country].[Region Name].[EAP]
+            THEN .95
+    WHEN [Country].[Region Name]
+        IS [Country].[Region Name].[WCA]
+            THEN .85
+ELSE .90
+END
+</Goal>
+      <Status>
+Case  
+  When KpiValue("Urban Completion") / KpiGoal("Urban Completion") &gt; .90  
+    Then 1  
+  When KpiValue("Urban Completion") / KpiGoal("Urban Completion") &lt;= .90  
+    And  
+       KpiValue("Urban Completion") / KpiGoal("Urban Completion") &gt; .80  
+    Then 0  
+  Else -1  
+End
+</Status>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Gauge - Ascending</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="8f0d50d8-cfc6-4fbb-bcec-8ba0df110a4d">
+      <ID>KPI 2</ID>
+      <Name>KPI_Rural</Name>
+      <Value>[Measures].[Rural Completion]</Value>
+      <Goal>CASE
+    WHEN [Country].[Region Name]
+        IS [Country].[Region Name].[EAP]
+            THEN .95
+    WHEN [Country].[Region Name]
+        IS [Country].[Region Name].[WCA]
+            THEN .85
+ELSE .90
+END
+</Goal>
+      <Status>
+Case  
+  When KpiValue("Rural Completion") / KpiGoal("Rural Completion") &gt; .90  
+    Then 1  
+  When KpiValue("Rural Completion") / KpiGoal("Rural Completion") &lt;= .90  
+    And  
+       KpiValue("Rural Completion") / KpiGoal("Rural Completion") &gt; .80  
+    Then 0  
+  Else -1  
+End
+</Status>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Gauge - Ascending</StatusGraphic>
+    </Kpi>
+  </Kpis>
+</Cube>

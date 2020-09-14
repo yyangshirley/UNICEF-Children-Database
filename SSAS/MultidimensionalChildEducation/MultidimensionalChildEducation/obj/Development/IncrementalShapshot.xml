@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>MultidimensionalChildEducation</Database>
+    <Server>DESKTOP-P2399PU\ECE9017</Server>
+    <ConnectionString>Data Source=DESKTOP-P2399PU\ECE9017;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>05xes57xFzpmHcvWiaSzX84XoBY=4/17/2020 1:47:01 AM4/17/2020 1:47:01 AM</TimeStamp>
+        <ID>
+          <String>Child Education DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>CFxhG1wyGIRk+zd1ukcVg/3GKqw=4/19/2020 5:57:29 PM4/17/2020 1:47:59 AM</TimeStamp>
+        <ID>
+          <String>Child Education DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9NYy+BOGTOTmxnw6JDr45zjreUY=4/17/2020 1:48:25 AM4/17/2020 1:48:25 AM</TimeStamp>
+        <ID>
+          <String>Child Labour</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>c9y9EweZM2VIAxQ+CCqyQ8JgYQ4=4/17/2020 1:50:59 AM4/17/2020 1:50:32 AM</TimeStamp>
+        <ID>
+          <String>Country</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>6gd4+ou8c7jlHa0HtSBM/JbCG1E=4/17/2020 1:51:37 AM4/17/2020 1:51:37 AM</TimeStamp>
+        <ID>
+          <String>Modernization</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NmZR18nG6UfOkL0NpKM0BgzOqc8=4/17/2020 1:52:19 AM4/17/2020 1:52:18 AM</TimeStamp>
+        <ID>
+          <String>Violence</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>W5a8kCb8Nfdq2kqTayAe2mpcDmY=4/19/2020 6:51:17 PM4/17/2020 1:53:01 AMC4vXU6sUeM9WjDCMoD4xMkmNOfU=4/19/2020 5:10:03 PM4/17/2020 1:53:01 AM</TimeStamp>
+        <ID>
+          <String>Child Education DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>sD1gHJ0XrmQtObpAtR8BPAucRRs=4/17/2020 1:45:45 AM4/17/2020 1:45:45 AM</TimeStamp>
+      <ID>
+        <String>MultidimensionalChildEducation</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2020-04-19T22:51:20.413333Z</LastDeployed>
+</DeploymentSnapshot>

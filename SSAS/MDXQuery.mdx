@@ -1,0 +1,32 @@
+/** get the relationship between School Completion and Total Labour Num/ Total Violence Num amoung the world*/
+SELECT {
+	[Measures].[School Completion Rate],
+	[Measures].[Total Labour Num],
+	[Measures].[Total Violence Num]
+	} ON COLUMNS,
+NON EMPTY{
+	[Country].[Country Name].[Country Name].MEMBERS
+} ON ROWS
+FROM [Child Education DW];
+
+/** Calculate mean, median and rank in school completion rate amoung all the Countries*/
+WITH SET [Order] AS 
+        Order ( 
+         [Country].[Region-Country].[Country Name].MEMBERS, 
+          [Measures].[School Completion Rate],
+		  BDESC
+        )
+MEMBER [Measures].[Median] AS MEDIAN
+	([Country].[Region-Country].[Country Name].MEMBERS, [Measures].[School Completion Rate])
+MEMBER [Measures].[Mean] AS AVG 
+	([Country].[Region-Country].[Country Name].MEMBERS, [Measures].[School Completion Rate])
+MEMBER [Measures].[Rank] AS RANK 
+	([Country].[Region-Country].CURRENTMEMBER, [Order])
+
+SELECT {
+	[Measures].[School Completion Rate], 
+	[Measures].[Mean], 
+	[Measures].[Median],
+	[Measures].[Rank]} ON 0,
+        NonEmpty([Country].[Region-Country].[Country Name].ALLMEMBERS) ON 1
+FROM [Child Education DW];

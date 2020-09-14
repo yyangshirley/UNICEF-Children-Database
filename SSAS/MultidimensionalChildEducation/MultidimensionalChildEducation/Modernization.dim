@@ -1,0 +1,179 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="70975082-3788-4ddc-9994-ac8bef8f9fe4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Modernization</ID>
+  <Name>Modernization</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="196526b8-fc72-47ee-8934-c8d7bbf833d5">
+    <DataSourceViewID>Child Education DW</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="015e4ea5-4409-40e7-b873-21feb3a663cf">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="749f212b-42ca-4d46-b90d-f594ce79369a">
+      <ID>Modernization Key</ID>
+      <Name>Modernization Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="72f74928-0763-426c-9c86-98ae9f750e43">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="38f37324-6431-4cc1-8247-95d064f1a6a4">
+            <TableID>dbo_DimModernization</TableID>
+            <ColumnID>ModernizationKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d3c35f8f-7b1e-4b1a-afdd-10d832bf8a0d">
+          <AttributeID>Country Name</AttributeID>
+          <Name>Country Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a0704a76-d4b8-4c63-a84b-f5b6206dde49">
+          <AttributeID>Urban</AttributeID>
+          <Name>Urban</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="897b6e2c-ead6-4804-88ec-191ad007796a">
+          <AttributeID>Rural</AttributeID>
+          <Name>Rural</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="42bffa2c-b7b1-4397-b25c-747a43392689">
+          <AttributeID>Urban Population Weighted</AttributeID>
+          <Name>Urban Population Weighted</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="647de5c4-b650-4ec4-9e9a-ee87192fc9f8">
+          <AttributeID>Rural Population Weighted</AttributeID>
+          <Name>Rural Population Weighted</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7b564f50-68f7-489d-8e9d-b9f5c6288b8c">
+      <ID>Country Name</ID>
+      <Name>Country Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="afc9ac04-ff8d-4027-ac35-de622978824e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2fa09ce2-5120-4c56-96e8-df8944db3f62">
+            <TableID>dbo_DimModernization</TableID>
+            <ColumnID>CountryName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f353f098-5996-466d-bb7c-055e9c499180">
+      <ID>Urban</ID>
+      <Name>Urban</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c174d045-1128-406e-ab53-d8893a6c71c6">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c95596d9-7cb2-4dbc-8cfc-4a6bfb5c3bef">
+            <TableID>dbo_DimModernization</TableID>
+            <ColumnID>Urban</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3721ef26-86ed-4f9e-9ba1-1065224529f5">
+      <ID>Rural</ID>
+      <Name>Rural</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aecb7ee1-43c1-4089-b6fa-1f5eb702731a">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="83b53a6b-be07-43c6-b955-17db59c61f4d">
+            <TableID>dbo_DimModernization</TableID>
+            <ColumnID>Rural</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8e524634-6c09-4514-86cb-ede66a54c392">
+      <ID>Urban Population Weighted</ID>
+      <Name>Urban Population Weighted</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f1ade68-c17e-45ff-b810-1f6bb1ae24d0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="db5153c5-027b-47de-9b99-e270c57a365f">
+            <TableID>dbo_DimModernization</TableID>
+            <ColumnID>UrbanPopulationWeighted</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="69d0f4a0-4aea-425e-b008-b0379bb33ef5">
+      <ID>Rural Population Weighted</ID>
+      <Name>Rural Population Weighted</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1670be77-d640-4a33-a75c-dc40e661552f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36929f8a-1c5e-403d-8dc9-6c2e9ed3a65c">
+            <TableID>dbo_DimModernization</TableID>
+            <ColumnID>RuralPopulationWeighted</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

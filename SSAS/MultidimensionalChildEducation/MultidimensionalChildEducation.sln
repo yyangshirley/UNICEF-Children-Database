@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "MultidimensionalChildEducation", "MultidimensionalChildEducation\MultidimensionalChildEducation.dwproj", "{AF3B082E-ECA6-450C-A4B3-7A83E9425DA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF3B082E-ECA6-450C-A4B3-7A83E9425DA6}.Development|Default.ActiveCfg = Development
+		{AF3B082E-ECA6-450C-A4B3-7A83E9425DA6}.Development|Default.Build.0 = Development
+		{AF3B082E-ECA6-450C-A4B3-7A83E9425DA6}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0CA3B85-95B9-4B87-BC57-EEE32BC8B72E}
+	EndGlobalSection
+EndGlobal
