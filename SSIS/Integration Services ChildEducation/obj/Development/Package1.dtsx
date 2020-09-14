@@ -1,0 +1,1847 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/19/2020 10:16:10 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-P2399PU"
+  DTS:CreatorName="DESKTOP-P2399PU\yyy_l"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{0D296CDD-75BC-4E9A-864A-C1D8702B80CC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Package1"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{2394C33F-0840-4C4C-A97D-7661AD24EFFC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionAdoNET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{3AF510D2-A266-4341-A746-D636D5913185}"
+      DTS:ObjectName="DestinationConnectionAdoNET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-P2399PU\ECE9017;Initial Catalog=ChildEducationDW;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionAdoNET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{C17EBE5D-69DE-43C6-A20D-57076928F4ED}"
+      DTS:ObjectName="SourceConnectionAdoNET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-P2399PU\ECE9017;Initial Catalog=ChildrenDatabase;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8333E9A7-6BE9-4E02-99A3-C83E3480076D}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{4B430496-5F42-4CA1-83D7-BFDD69E697AA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Insert Destination-Country"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination-Country"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimCountry]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Insert Destination-Country.Connections[OleDbConnection]"
+                  connectionManagerID="{C138DA0E-F252-4C47-8E27-673B79497DAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-P2399PU_ECE9017.ChildEducationDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].Columns[CountryID]"
+                      cachedDataType="i4"
+                      cachedName="CountryID"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].ExternalColumns[CountryKey]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].Columns[CountryName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CountryName"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].ExternalColumns[CountryName]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].Columns[CountryPopulation]"
+                      cachedDataType="i4"
+                      cachedName="CountryPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryPopulation]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].ExternalColumns[CountryKey]"
+                      dataType="i4"
+                      name="CountryKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].ExternalColumns[CountryName]"
+                      dataType="wstr"
+                      length="60"
+                      name="CountryName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
+                      dataType="wstr"
+                      length="50"
+                      name="RegionName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      dataType="i4"
+                      name="Population" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Insert Destination-Country.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Insert Destination-Country.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Country.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Insert Destination-Country.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Insert Destination-Moderization"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination-Moderization"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimModernization]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Insert Destination-Moderization.Connections[OleDbConnection]"
+                  connectionManagerID="{C138DA0E-F252-4C47-8E27-673B79497DAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-P2399PU_ECE9017.ChildEducationDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].Columns[WealthID]"
+                      cachedDataType="i4"
+                      cachedName="WealthID"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[ModernizationKey]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[WealthID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].Columns[Urban]"
+                      cachedDataType="r8"
+                      cachedName="Urban"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[Urban]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Urban]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].Columns[Rural]"
+                      cachedDataType="r8"
+                      cachedName="Rural"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[Rural]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Rural]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].Columns[UrbanPopulation]"
+                      cachedDataType="i4"
+                      cachedName="UrbanPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[UrbanPopulationWeighted]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[UrbanPopulation]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].Columns[RuralPopulation]"
+                      cachedDataType="i4"
+                      cachedName="RuralPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[RuralPopulationWeighted]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[RuralPopulation]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[ModernizationKey]"
+                      dataType="i4"
+                      name="ModernizationKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[CountryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CountryName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[Urban]"
+                      dataType="r8"
+                      name="Urban" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[Rural]"
+                      dataType="r8"
+                      name="Rural" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[UrbanPopulationWeighted]"
+                      dataType="i4"
+                      name="UrbanPopulationWeighted" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input].ExternalColumns[RuralPopulationWeighted]"
+                      dataType="i4"
+                      name="RuralPopulationWeighted" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Insert Destination-Moderization.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Insert Destination-Moderization.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Insert Destination-Moderization.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Insert Destination-Moderization.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Command-Country"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command-Country"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimCountry] SET [Population] = ? WHERE [CountryKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Command-Country.Connections[OleDbConnection]"
+                  connectionManagerID="{C138DA0E-F252-4C47-8E27-673B79497DAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-P2399PU_ECE9017.ChildEducationDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input].Columns[CountryID]"
+                      cachedDataType="i4"
+                      cachedName="CountryID"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input].Columns[CountryPopulation]"
+                      cachedDataType="i4"
+                      cachedName="CountryPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryPopulation]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command-Country.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command-Country.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Country.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command-Country.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Country.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command-Country.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Command-Moderization"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command-Moderization"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimModernization] SET [RuralPopulationWeighted] = ?,[UrbanPopulationWeighted] = ? WHERE [ModernizationKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Command-Moderization.Connections[OleDbConnection]"
+                  connectionManagerID="{C138DA0E-F252-4C47-8E27-673B79497DAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-P2399PU_ECE9017.ChildEducationDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].Columns[WealthID]"
+                      cachedDataType="i4"
+                      cachedName="WealthID"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[WealthID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].Columns[RuralPopulation]"
+                      cachedDataType="i4"
+                      cachedName="RuralPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[RuralPopulation]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].Columns[UrbanPopulation]"
+                      cachedDataType="i4"
+                      cachedName="UrbanPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[UrbanPopulation]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command-Moderization.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command-Moderization.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command-Moderization.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command-Moderization.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command-Moderization.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Slowly Changing Dimension-Country"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension-Country"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [CountryKey], [CountryName], [Population] FROM [dbo].[DimCountry]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Connections[LookupConnection]"
+                  connectionManagerID="{C138DA0E-F252-4C47-8E27-673B79497DAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-P2399PU_ECE9017.ChildEducationDW]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].Columns[CountryID]"
+                      cachedDataType="i4"
+                      cachedName="CountryID"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].ExternalColumns[CountryKey]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].Columns[CountryName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CountryName"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].ExternalColumns[CountryName]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].Columns[CountryPopulation]"
+                      cachedDataType="i4"
+                      cachedName="CountryPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].ExternalColumns[Population]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryPopulation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].ExternalColumns[CountryKey]"
+                      dataType="i4"
+                      name="CountryKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].ExternalColumns[CountryName]"
+                      dataType="wstr"
+                      length="60"
+                      name="CountryName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input].ExternalColumns[Population]"
+                      dataType="i4"
+                      name="Population" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension-Moderization"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [ModernizationKey], [Rural], [RuralPopulationWeighted], [Urban], [UrbanPopulationWeighted] FROM [dbo].[DimModernization]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Connections[LookupConnection]"
+                  connectionManagerID="{C138DA0E-F252-4C47-8E27-673B79497DAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-P2399PU_ECE9017.ChildEducationDW]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].Columns[WealthID]"
+                      cachedDataType="i4"
+                      cachedName="WealthID"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[ModernizationKey]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[WealthID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].Columns[Rural]"
+                      cachedDataType="r8"
+                      cachedName="Rural"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[Rural]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Rural]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].Columns[RuralPopulation]"
+                      cachedDataType="i4"
+                      cachedName="RuralPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[RuralPopulationWeighted]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[RuralPopulation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].Columns[Urban]"
+                      cachedDataType="r8"
+                      cachedName="Urban"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[Urban]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Urban]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].Columns[UrbanPopulation]"
+                      cachedDataType="i4"
+                      cachedName="UrbanPopulation"
+                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[UrbanPopulationWeighted]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[UrbanPopulation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[ModernizationKey]"
+                      dataType="i4"
+                      name="ModernizationKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[Rural]"
+                      dataType="r8"
+                      name="Rural" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[RuralPopulationWeighted]"
+                      dataType="i4"
+                      name="RuralPopulationWeighted" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[Urban]"
+                      dataType="r8"
+                      name="Urban" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input].ExternalColumns[UrbanPopulationWeighted]"
+                      dataType="i4"
+                      name="UrbanPopulationWeighted" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Source - Country"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="Source - Country"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Country"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Source - Country.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionAdoNET]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionAdoNET]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[CountryID]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryID]"
+                      name="CountryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[RegionID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[RegionID]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[RegionID]"
+                      name="RegionID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[CountryName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryName]"
+                      name="CountryName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[LDC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[LDC]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[LDC]"
+                      name="LDC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryPopulation]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[CountryPopulation]"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].Columns[CountryPopulation]"
+                      name="CountryPopulation"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[CountryID]"
+                      dataType="i4"
+                      name="CountryID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[RegionID]"
+                      dataType="i4"
+                      name="RegionID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[CountryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CountryName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[LDC]"
+                      dataType="wstr"
+                      length="50"
+                      name="LDC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output].ExternalColumns[CountryPopulation]"
+                      dataType="i4"
+                      name="CountryPopulation" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[CountryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[CountryID]"
+                      name="CountryID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[RegionID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[RegionID]"
+                      name="RegionID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[CountryName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[CountryName]"
+                      name="CountryName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[LDC]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[LDC]"
+                      name="LDC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[CountryPopulation]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[CountryPopulation]"
+                      name="CountryPopulation" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Source - CountryWealth"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="Source - CountryWealth"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."CountryWealth"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Source - CountryWealth.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionAdoNET]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionAdoNET]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[WealthID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[WealthID]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[WealthID]"
+                      name="WealthID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[LabourID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[LabourID]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[LabourID]"
+                      name="LabourID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[CountryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[CountryID]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[CountryID]"
+                      name="CountryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Urban]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Urban]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Urban]"
+                      name="Urban"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Rural]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Rural]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Rural]"
+                      name="Rural"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Poorest]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Poorest]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Poorest]"
+                      name="Poorest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Richest]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Richest]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Richest]"
+                      name="Richest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[UrbanPopulation]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[UrbanPopulation]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[UrbanPopulation]"
+                      name="UrbanPopulation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[RuralPopulation]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[RuralPopulation]"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].Columns[RuralPopulation]"
+                      name="RuralPopulation"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[WealthID]"
+                      dataType="i4"
+                      name="WealthID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[LabourID]"
+                      dataType="i4"
+                      name="LabourID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[CountryID]"
+                      dataType="i4"
+                      name="CountryID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Urban]"
+                      dataType="r8"
+                      name="Urban" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Rural]"
+                      dataType="r8"
+                      name="Rural" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Poorest]"
+                      dataType="r8"
+                      name="Poorest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[Richest]"
+                      dataType="r8"
+                      name="Richest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[UrbanPopulation]"
+                      dataType="i4"
+                      name="UrbanPopulation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output].ExternalColumns[RuralPopulation]"
+                      dataType="i4"
+                      name="RuralPopulation" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[WealthID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[WealthID]"
+                      name="WealthID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[LabourID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[LabourID]"
+                      name="LabourID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[CountryID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[CountryID]"
+                      name="CountryID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Urban]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Urban]"
+                      name="Urban" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Rural]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Rural]"
+                      name="Rural" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Poorest]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Poorest]"
+                      name="Poorest" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Richest]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[Richest]"
+                      name="Richest" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[UrbanPopulation]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[UrbanPopulation]"
+                      name="UrbanPopulation" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[RuralPopulation]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[RuralPopulation]"
+                      name="RuralPopulation" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[ADO NET Source Output]"
+              endId="Package\Data Flow Task\Slowly Changing Dimension-Country.Inputs[Slowly Changing Dimension Input]"
+              name="ADO NET Source Output"
+              startId="Package\Data Flow Task\Source - Country.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[ADO NET Source Output1]"
+              endId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Inputs[Slowly Changing Dimension Input]"
+              name="ADO NET Source Output"
+              startId="Package\Data Flow Task\Source - CountryWealth.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
+              endId="Package\Data Flow Task\OLE DB Command-Moderization.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Changing Attribute Updates Output1]"
+              endId="Package\Data Flow Task\OLE DB Command-Country.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[New Output]"
+              endId="Package\Data Flow Task\Insert Destination-Moderization.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\Data Flow Task\Slowly Changing Dimension-Moderization.Outputs[New Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[New Output1]"
+              endId="Package\Data Flow Task\Insert Destination-Country.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\Data Flow Task\Slowly Changing Dimension-Country.Outputs[New Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A46F0B92-2258-46EF-B3B6-2C02A4D981E2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C138DA0E-F252-4C47-8E27-673B79497DAB}"
+          SQLTask:SqlStatementSource="SELECT CountryKey, CountryName, RegionName, Population&#xA;FROM   DimCountry" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F8385E66-D0CB-4B01-A223-6D84B35C8E6C}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Execute SQL Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Data Flow Task"
+          TopLeft="12.5833332277835,5.50000000000004" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Execute SQL Task"
+          TopLeft="0,72.3666653726498" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="85.2916666138917,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.1999987059831"
+              Start="0,0"
+              End="0,16.6999987059831">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.6999987059831" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\Source - Country"
+          TopLeft="239.166666666667,5.50000000000004" />
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\Data Flow Task\Source - CountryWealth"
+          TopLeft="497.5,5.49999999999993" />
+        <NodeLayout
+          Size="250.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\Slowly Changing Dimension-Country"
+          TopLeft="193.000000310441,108.888888875975" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
+          TopLeft="318.416666821887,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.722222209308"
+              Start="0,0"
+              End="0,53.222222209308">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.222222209308" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="273.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task\Slowly Changing Dimension-Moderization"
+          TopLeft="453.611111566424,108.888888875975" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[ADO NET Source Output1]"
+          TopLeft="591.888889116545,48.1666666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.7222222093079"
+              Start="0,0"
+              End="0,53.2222222093079">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.2222222093079" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="228,42.6666666666667"
+          Id="Package\Data Flow Task\Insert Destination-Moderization"
+          TopLeft="466.833333333333,210.833333333333" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[New Output]"
+          TopLeft="546.055556010869,151.555555542641">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.7777773224644,59.2777777906922"
+              Start="0,0"
+              End="34.7777773224644,51.7777777906922">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.9180946274762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.9180946274762"
+                    Point2="0,23.9180946274762"
+                    Point3="4,23.9180946274762" />
+                  <mssgle:LineSegment
+                    End="30.7777773224644,23.9180946274762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.7777773224644,23.9180946274762"
+                    Point2="34.7777773224644,23.9180946274762"
+                    Point3="34.7777773224644,27.9180946274762" />
+                  <mssgle:LineSegment
+                    End="34.7777773224644,51.7777777906922" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-9.70249805751779,28.9180946274762,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="230.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\OLE DB Command-Moderization"
+          TopLeft="701.166666666667,210.833333333333" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
+          TopLeft="634.500000455313,151.555555542641">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="181.999999544687,59.2777777906922"
+              Start="0,0"
+              End="181.999999544687,51.7777777906922">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.9180946274762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.9180946274762"
+                    Point2="0,23.9180946274762"
+                    Point3="4,23.9180946274762" />
+                  <mssgle:LineSegment
+                    End="177.999999544687,23.9180946274762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="177.999999544687,23.9180946274762"
+                    Point2="181.999999544687,23.9180946274762"
+                    Point3="181.999999544687,27.9180946274762" />
+                  <mssgle:LineSegment
+                    End="181.999999544687,51.7777777906922" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="12.4660935223433,28.9180946274762,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="204,42.6666666666667"
+          Id="Package\Data Flow Task\Insert Destination-Country"
+          TopLeft="5.5,210.833333333334" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[New Output1]"
+          TopLeft="277.88888919933,151.555555542641">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-170.38888919933,59.2777777906921"
+              Start="0,0"
+              End="-170.38888919933,51.7777777906921">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.9366925116748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.9366925116748"
+                    Point2="0,23.9366925116748"
+                    Point3="-4,23.9366925116748" />
+                  <mssgle:LineSegment
+                    End="-166.38888919933,23.9366925116748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-166.38888919933,23.9366925116748"
+                    Point2="-170.38888919933,23.9366925116748"
+                    Point3="-170.38888919933,27.9366925116748" />
+                  <mssgle:LineSegment
+                    End="-170.38888919933,51.7777777906921" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-112.285831318415,28.9366925116748,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\OLE DB Command-Country"
+          TopLeft="230.5,210.833333333334" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Changing Attribute Updates Output1]"
+          TopLeft="358.777778088219,151.555555542641">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-24.9444447548854,59.2777777906921"
+              Start="0,0"
+              End="-24.9444447548854,51.7777777906921">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.9366925116748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.9366925116748"
+                    Point2="0,23.9366925116748"
+                    Point3="-4,23.9366925116748" />
+                  <mssgle:LineSegment
+                    End="-20.9444447548854,23.9366925116748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.9444447548854,23.9366925116748"
+                    Point2="-24.9444447548854,23.9366925116748"
+                    Point3="-24.9444447548854,27.9366925116748" />
+                  <mssgle:LineSegment
+                    End="-24.9444447548854,51.7777777906921" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.0061286274427,28.9366925116748,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Slowly Changing Dimension-Country">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{C138DA0E-F252-4C47-8E27-673B79497DAB}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimCountry]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - Country.Outputs[ADO NET Source Output].Columns[CountryID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;CountryKey&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - Country.Outputs[ADO NET Source Output].Columns[CountryName]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;CountryName&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - Country.Outputs[ADO NET Source Output].Columns[CountryPopulation]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Population&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Slowly Changing Dimension-Moderization">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{C138DA0E-F252-4C47-8E27-673B79497DAB}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimModernization]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - CountryWealth.Outputs[ADO NET Source Output].Columns[WealthID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ModernizationKey&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Rural]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Rural&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - CountryWealth.Outputs[ADO NET Source Output].Columns[RuralPopulation]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;RuralPopulationWeighted&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - CountryWealth.Outputs[ADO NET Source Output].Columns[Urban]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Urban&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Source - CountryWealth.Outputs[ADO NET Source Output].Columns[UrbanPopulation]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;UrbanPopulationWeighted&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
